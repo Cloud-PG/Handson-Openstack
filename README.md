@@ -19,7 +19,7 @@ Introduction<a name="introduction"></a>
 General notions<a name="general-notion"></a>
 ---------
 
-* Istanze, reti e sottoreti, router, immagini, volumi, flavours.
+* Istances, net and subnet, router, images, volumes, flavours.
 
 * Project, access & security, key pairs, floating ip.
 
