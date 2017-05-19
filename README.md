@@ -74,12 +74,12 @@ Virtual Machine Creation<a name="vm-creation"></a>
 
 1. Compute -> Instances -> Launch Instance.
 2. Name, source (image), flavour (small enough), network (newly created network), keypair.
-3. Verify machine creation and gain access to it (floating IP and security groups).
 
 Port mapping<a name="port-mapping"></a>
 =========
 
-1. Create a second virtual machine (without floating IP) ???
+1. Verify vm creation and gain ssh access to it.
+2. Setup another vm, or use this as server for next exercise.
 
 First Example (web server)<a name="web-server"></a>
 =========
