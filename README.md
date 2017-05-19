@@ -61,6 +61,7 @@ Dashboard usage<a name="dashboard"></a>
 
 * How to login.
 * Menu.
+* How to access a VM console.
 
 Networking<a name="networking"></a>
 =========
