@@ -1,17 +1,17 @@
 # Handson-Openstack
 
 1. [Introduction][1]
- 1. [General notions][2]
- 2. [Glossary][3]
- 3. [Openstack services][4]
- 4. [Dashboard usage][5]
+    1. [General notions][2]
+    2. [Glossary][3]
+    3. [Openstack services][4]
+    4. [Dashboard usage][5]
 2. [Networking][6]
 3. [Virtual machine creation][7]
 4. [Port mapping][8]
 5. [Web server example][9]
 6. [Advanced examples][10]
- 1. [Heat introduction][11]
- 2. [Heat template example][12]
+    1. [Heat introduction][11]
+    2. [Heat template example][12]
 
 Introduction
 =========
