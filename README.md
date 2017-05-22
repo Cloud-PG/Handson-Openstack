@@ -133,7 +133,7 @@ Advanced Examples<a name="advanced"></a>
 Heat Introduction<a name="heat-introduction"></a>
 ---------
 
-* How heat works: (copy from Bologna).
+* How heat works.
 
 Heat template example<a name="heat-template"></a>
 ---------
