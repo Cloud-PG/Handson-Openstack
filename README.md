@@ -1,4 +1,4 @@
-# Handson-Openstack
+# Hands-on Openstack
 
 1. [Introduction](#introduction)
     1. [General notions](#general-notion)
