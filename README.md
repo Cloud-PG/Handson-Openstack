@@ -94,6 +94,8 @@ Section **Network** -> **Networks** -> **Create network**. At the prompt enter a
 
 IMAGE
 
+### Router creation
+
 Section **Network** -> **Router** -> **Create router**. At the prompt, enter a name for the router, select **ext-net** from the dropdown menu and click Create. After creating the router, you need to attach it to a local network (the one we just created) so click on the router name, go to the **Interfaces** tab, click on **Add interface**, select the subnet we created earlier and submit.
 
 We have now a private network connected to the outside world.
