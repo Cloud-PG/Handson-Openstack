@@ -12,9 +12,6 @@ parameters:
     type: string
     default: 192.168.10.0/24
     description: CIDR for demo network
-#  demo_net_gateway:
-#    type: string
-#    description: gateway for demo network
   demo_net_pool_start:
     type: string
     default: 192.168.10.10
@@ -40,11 +37,6 @@ parameters:
   demo_server1_name:
     type: string
     description: name of the first server created.
-#  fix_hosts:
-#    type: string
-#    hidden: true
-#    immutable: true
-#    default: "141.250.2.227   openstack.fisica.unipg.it       controller"
     
 resources:
   demo_net:
@@ -57,7 +49,6 @@ resources:
     properties:
       network_id: { get_resource: demo_net }
       cidr: { get_param: demo_net_cidr }
-#      gateway_ip: { get_param: demo_net_gateway }
       dns_nameservers: [8.8.8.8]
       allocation_pools:
         - start: { get_param: demo_net_pool_start }
@@ -75,10 +66,22 @@ resources:
       router_id: { get_resource: demo_router }
       subnet_id: { get_resource: demo_subnet }
 
-#  demo_key:
-#    type: OS::Nova::KeyPair
-#    properties:
-#      name: { get_param: demo_key_name }
+  webserver_security_group:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      description: Port 22 and 80 open for webserver.
+      name: webserver-security-group
+      rules: [
+        {remote_ip_prefix: 0.0.0.0/0,
+        protocol: tcp,
+        port_range_min: 22,
+        port_range_max: 22},
+        {remote_ip_prefix: 0.0.0.0/0,
+        protocol: tcp,
+        port_range_min: 80,
+        port_range_max: 80},
+        {remote_ip_prefix: 0.0.0.0/0,
+        protocol: icmp}]
 
   web-server-deploy:
     type: OS::Heat::WaitCondition
@@ -103,7 +106,6 @@ resources:
       user_data:
         str_replace:
           params:
-            $HOSTS: { get_file: "https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/heat-template/hosts" }
             wc_notify: { get_attr: ['wait_handle', 'curl_cli'] }
           template: |
             #!/bin/bash
@@ -115,13 +117,13 @@ resources:
             tar -zxvf web-server.tar.gz -C /var/www
             service nginx restart
             wc_notify --data-binary '{"status": "SUCCESS"}'
-
   server1_port:
     type: OS::Neutron::Port
     properties:
       network_id: { get_resource: demo_net }
       fixed_ips:
         - subnet_id: { get_resource: demo_subnet }
+      security_groups: [{ get_resource: server_security_group }]
   server1_floating_ip:
     type: OS::Neutron::FloatingIP
     properties:
