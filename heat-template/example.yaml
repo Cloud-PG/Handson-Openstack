@@ -103,11 +103,11 @@ resources:
       user_data:
         str_replace:
           params:
-            $HOSTS: { get_file: hosts }
+            $HOSTS: { get_file: "https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/heat-template/hosts" }
             wc_notify: { get_attr: ['wait_handle', 'curl_cli'] }
           template: |
             #!/bin/bash
-            echo $HOSTS >> /etc/hosts
+            echo "141.250.2.227   openstack.fisica.unipg.it       controller" >> /etc/hosts
             apt-get update
             apt-get dist-upgrade -y
             apt-get install nginx -y
