@@ -5,7 +5,8 @@ description: Create new Tenant network and add a subnet to the network. Create  
   
 parameters:
   demo_net_name:
-    type: demo-net
+    type: string
+    default: demo-net
     description: Name for demo network
   demo_net_cidr:
     type: string
@@ -16,9 +17,11 @@ parameters:
 #    description: gateway for demo network
   demo_net_pool_start:
     type: string
+    default: 192.168.10.10
     description: network pool start. typically .10 of whatever /24 is defined
   demo_net_pool_end:
     type: string
+    default: 192.168.10.200
     description: network pool end. typically .100 of whatever /24 is defined
   demo_ext_net_name:
     type: string
@@ -32,19 +35,11 @@ parameters:
     description: image to use to for the server
   demo_flavor_name:
     type: string
+    default: m1.medium
     description: openstack server flavor name use openstack flavor list to see options
   demo_server1_name:
     type: string
     description: name of the first server created.
-#  demo_server2_name:
-#    type: string
-#    description: name of the second server created
-#  demo_zone_server1:
-#    type: string
-#    description: name of availability zone to put server1 VM in
-#  demo_zone_server2:
-#    type: string
-#    description: name of availability zone to put server2 VM in
     
 resources:
   demo_net:
@@ -58,8 +53,7 @@ resources:
       network_id: { get_resource: demo_net }
       cidr: { get_param: demo_net_cidr }
 #      gateway_ip: { get_param: demo_net_gateway }
-      dns_nameservers:
-        {8.8.8.8}
+      dns_nameservers: [8.8.8.8]
       allocation_pools:
         - start: { get_param: demo_net_pool_start }
           end: { get_param: demo_net_pool_end }
@@ -76,10 +70,10 @@ resources:
       router_id: { get_resource: demo_router }
       subnet_id: { get_resource: demo_subnet }
 
-  demo_key:
-    type: OS::Nova::KeyPair
-    properties:
-      name: { get_param: demo_key_name }
+#  demo_key:
+#    type: OS::Nova::KeyPair
+#    properties:
+#      name: { get_param: demo_key_name }
 
   server1:
     type: OS::Nova::Server
@@ -87,8 +81,7 @@ resources:
       name: { get_param: demo_server1_name }
       image: { get_param: demo_image_name }
       flavor: { get_param: demo_flavor_name }
-      key_name:  { get_resource: demo_key }
-      availability_zone: { get_param: demo_zone_server1 }
+      key_name:  { get_param: demo_key_name }
       networks:
         - port: { get_resource: server1_port }
   server1_port:
@@ -102,26 +95,3 @@ resources:
     properties:
       floating_network: { get_param: demo_ext_net_name }
       port_id: { get_resource: server1_port }
-#  server2:
-#    type: OS::Nova::Server
-#    properties:
-#      name: { get_param: demo_server2_name }
-#      image: { get_param: demo_image_name }
-#      flavor: { get_param: demo_flavor_name }
-#      key_name:  { get_resource: demo_key }
-#      availability_zone: { get_param: demo_zone_server2 }
-#      networks:
-#        - port: { get_resource: server2_port }
-#
-#  server2_port:
-#    type: OS::Neutron::Port
-#    properties:
-#      network_id: { get_resource: demo_net }
-#      fixed_ips:
-#        - subnet_id: { get_resource: demo_subnet }
-#
-#  server2_floating_ip:
-#    type: OS::Neutron::FloatingIP
-#    properties:
-#      floating_network: { get_param: demo_ext_net_name }
-#      port_id: { get_resource: server2_port }
