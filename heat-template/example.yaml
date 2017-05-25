@@ -4,6 +4,9 @@ description: Create new Tenant network and add a subnet to the network. Create  
   that runs this MUST be in the openstack admin role
   
 parameters:
+  demo_net_name:
+    type: demo-net
+    description: Name for demo network
   demo_net_cidr:
     type: string
     default: 192.168.10.0/24
