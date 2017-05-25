@@ -1,0 +1,124 @@
+heat_template_version: 2015-04-30
+
+description: Create new Tenant network and add a subnet to the network. Create  2 VMs and place the VMs in 2 unique compute nodes. Ensure each VM has a floating IP. User
+  that runs this MUST be in the openstack admin role
+  
+parameters:
+  demo_net_cidr:
+    type: string
+    default: 192.168.10.0/24
+    description: CIDR for demo network
+#  demo_net_gateway:
+#    type: string
+#    description: gateway for demo network
+  demo_net_pool_start:
+    type: string
+    description: network pool start. typically .10 of whatever /24 is defined
+  demo_net_pool_end:
+    type: string
+    description: network pool end. typically .100 of whatever /24 is defined
+  demo_ext_net_name:
+    type: string
+    default: ext-net
+    description: external net name. use neutron net-list to figure it out.
+  demo_key_name:
+    type: string
+    description: ssh key required for server creation
+  demo_image_name:
+    type: string
+    description: image to use to for the server
+  demo_flavor_name:
+    type: string
+    description: openstack server flavor name use openstack flavor list to see options
+  demo_server1_name:
+    type: string
+    description: name of the first server created.
+#  demo_server2_name:
+#    type: string
+#    description: name of the second server created
+#  demo_zone_server1:
+#    type: string
+#    description: name of availability zone to put server1 VM in
+#  demo_zone_server2:
+#    type: string
+#    description: name of availability zone to put server2 VM in
+    
+resources:
+  demo_net:
+    type: OS::Neutron::Net
+    properties:
+      name: { get_param: demo_net_name }
+
+  demo_subnet:
+    type: OS::Neutron::Subnet
+    properties:
+      network_id: { get_resource: demo_net }
+      cidr: { get_param: demo_net_cidr }
+#      gateway_ip: { get_param: demo_net_gateway }
+      dns_nameservers:
+        {8.8.8.8}
+      allocation_pools:
+        - start: { get_param: demo_net_pool_start }
+          end: { get_param: demo_net_pool_end }
+
+  demo_router:
+    type: OS::Neutron::Router
+    properties:
+      external_gateway_info:
+        network: { get_param: demo_ext_net_name }
+
+  router_interface:
+    type: OS::Neutron::RouterInterface
+    properties:
+      router_id: { get_resource: demo_router }
+      subnet_id: { get_resource: demo_subnet }
+
+  demo_key:
+    type: OS::Nova::KeyPair
+    properties:
+      name: { get_param: demo_key_name }
+
+  server1:
+    type: OS::Nova::Server
+    properties:
+      name: { get_param: demo_server1_name }
+      image: { get_param: demo_image_name }
+      flavor: { get_param: demo_flavor_name }
+      key_name:  { get_resource: demo_key }
+      availability_zone: { get_param: demo_zone_server1 }
+      networks:
+        - port: { get_resource: server1_port }
+  server1_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: demo_net }
+      fixed_ips:
+        - subnet_id: { get_resource: demo_subnet }
+  server1_floating_ip:
+    type: OS::Neutron::FloatingIP
+    properties:
+      floating_network: { get_param: demo_ext_net_name }
+      port_id: { get_resource: server1_port }
+#  server2:
+#    type: OS::Nova::Server
+#    properties:
+#      name: { get_param: demo_server2_name }
+#      image: { get_param: demo_image_name }
+#      flavor: { get_param: demo_flavor_name }
+#      key_name:  { get_resource: demo_key }
+#      availability_zone: { get_param: demo_zone_server2 }
+#      networks:
+#        - port: { get_resource: server2_port }
+#
+#  server2_port:
+#    type: OS::Neutron::Port
+#    properties:
+#      network_id: { get_resource: demo_net }
+#      fixed_ips:
+#        - subnet_id: { get_resource: demo_subnet }
+#
+#  server2_floating_ip:
+#    type: OS::Neutron::FloatingIP
+#    properties:
+#      floating_network: { get_param: demo_ext_net_name }
+#      port_id: { get_resource: server2_port }
