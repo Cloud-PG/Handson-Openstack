@@ -79,7 +79,7 @@ Open a web browser and go to the [FisGeo & INFN Perugia Openstack homepage](http
 ### How to login
 Select **Openstack local credentials** from the dropdown menu and use your credentials to login.
 
-![](/img/login-openstack.png)
+![](img/login-openstack.png)
 
 The **Project** section is where you can manage all your environment.
 
