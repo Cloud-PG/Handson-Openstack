@@ -64,22 +64,22 @@ Glossary<a name="glossary"></a>
 Openstack services<a name="services"></a>
 ---------
 
-* Keystone
-* Glance
-* Nova
-* Neutron
-* Cinder
-* Heat
+* Keystone: Authentication ad authorization service
+* Glance: Image service
+* Nova: Compute service
+* Neutron: Network service
+* Cinder: Volumes and persistent storage service
+* Heat: Orchestration service
 
 Dashboard usage<a name="dashboard"></a>
 ---------
 
-[FisGeo & INFN Perugia Openstack homepage](http://openstack.fisica.unipg.it/)
+Open a web browser and go to the [FisGeo & INFN Perugia Openstack homepage](http://openstack.fisica.unipg.it/)
 
 ### How to login
 Select **Openstack local credentials** from the dropdown menu and use your credentials to login.
 
-IMAGE
+![](/img/login-openstack.png)
 
 The **Project** section is where you can manage all your environment.
 
