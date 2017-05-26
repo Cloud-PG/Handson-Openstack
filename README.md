@@ -92,7 +92,7 @@ Networking<a name="networking"></a>
 
 Section **Network** -> **Networks** -> **Create network**. At the prompt enter a name for your network, go to the **Subnet** tab, enter a name and a network address for your subnet, go to the **Subnet details** tab and add "8.8.8.8" in the DNS nameservers section.
 
-IMAGE
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Network_creation.png)
 
 ### Router creation
 
