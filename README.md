@@ -123,7 +123,7 @@ Virtual Machine Creation<a name="vm-creation"></a>
 
 Section **Compute** -> **Instances** -> **Launch Instance**.
 
-IMAGES come guida openstack
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Instance_creation.png)
 
 Port mapping<a name="port-mapping"></a>
 =========
