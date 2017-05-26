@@ -154,7 +154,15 @@ Verify that the instance has been correctly created. Click on it and go to the *
 * **Manage rules** and **Add rule** to open specific ports.
 * Go to **Instances**, under **Actions** column, **Edit security groups** for your instance and add the newly created ones.
 
-  IMAGE
+  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-1.png)
+
+  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-2.png)
+
+  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-3.png)
+
+  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-4.png)
+
+  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-5.png)
 
 First Example (web server)<a name="web-server"></a>
 =========
