@@ -106,7 +106,7 @@ Section **Network** -> **Router** -> **Create router**. At the prompt, enter a n
 
 We have now a private network connected to the outside world.
 
-IMAGE
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Router_creation.png)
 
 Virtual Machine Creation<a name="vm-creation"></a>
 =========
