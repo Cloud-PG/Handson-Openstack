@@ -125,14 +125,34 @@ Section **Compute** -> **Instances** -> **Launch Instance**.
 
 ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Instance_creation.png)
 
+Choose a name for your instance.
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Instance_creation-2.png)
+
+Choose the **image** you want to create the instance from (in this case ubuntu-16.04).
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Instance_creation-3.png)
+
+Choose the size of your instance.
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Instance_creation-4.png)
+
+Choose the previously created **network**.
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Instance_creation-5.png)
+
+Choose your **key-pair** and launch the instance.
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Instance_creation-6.png)
+
 Port mapping<a name="port-mapping"></a>
 =========
 
-1. Verify that the instance has been correctly created. Click on it and go to the **Console** tab. Since we used a cloud image, we can't access it via user and password, so we need to setup ssh connection to it.
-    * Go to **Access & Security**, click on **Security groups** tab and on **Create security group**.
-    * Create one for **SSH access** and another one to allow **ICMP** to the virtual machine.
-    * **Manage rules** and **Add rule** to open specific ports.
-    * Go to **Instances**, under **Actions** column, **Edit security groups** for your instance and add the newly created ones.
+Verify that the instance has been correctly created. Click on it and go to the **Console** tab. Since we used a cloud image, we can't access it via user and password, so we need to setup ssh connection to it.
+* Go to **Access & Security**, click on **Security groups** tab and on **Create security group**.
+* Create one for **SSH access** and another one to allow **ICMP** to the virtual machine.
+* **Manage rules** and **Add rule** to open specific ports.
+* Go to **Instances**, under **Actions** column, **Edit security groups** for your instance and add the newly created ones.
 
   IMAGE
 
