@@ -145,6 +145,14 @@ Choose your **key-pair** and launch the instance.
 
 ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Instance_creation-6.png)
 
+Add a **floating IP** to the instance.
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Floating-ip-1.png)
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Floating-ip-2.png)
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Floating-ip-3.png)
+
 Port mapping<a name="port-mapping"></a>
 =========
 
@@ -173,11 +181,15 @@ Verify that the instance has been correctly created. Click on it and go to the *
 First Example (web server)<a name="web-server"></a>
 =========
 
-1. Gain access to second virtual machine (or the first one if only one created).
+1. Gain access to second virtual machine.
 2. Install web-server (nginx).
 3. Download tarball with handson website.
 4. Open the necessary ports.
 5. Go to browser and verify installation.
+
+### Solution
+
+...
 
 Advanced Examples<a name="advanced"></a>
 =========
