@@ -108,6 +108,16 @@ We have now a private network connected to the outside world.
 
 ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Router_creation.png)
 
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Router_creation-2.png)
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Router_creation-3.png)
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Router_creation-4.png)
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Router_creation-5.png)
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Router_creation-6.png)
+
 Virtual Machine Creation<a name="vm-creation"></a>
 =========
 
