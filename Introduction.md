@@ -67,3 +67,5 @@ Select **Openstack local credentials** from the dropdown menu and use your crede
 ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Openstack_login.png)
 
 The **Project** section is where you can manage all your environment.
+
+[Networking](Networking.md)

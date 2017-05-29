@@ -32,3 +32,6 @@ Add a **floating IP** to the instance.
 ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Floating-ip-2.png)
 
 ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Floating-ip-3.png)
+
+
+[Port mapping](Port-mapping.md)

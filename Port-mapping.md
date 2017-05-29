@@ -22,3 +22,6 @@ Verify that the instance has been correctly created. Click on it and go to the *
   ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-6.png)
 
   ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-7.png)
+
+
+[Web server example](Web-server.md)
