@@ -68,4 +68,4 @@ Select **Openstack local credentials** from the dropdown menu and use your crede
 
 The **Project** section is where you can manage all your environment.
 
-[Networking](Networking.md)
+Next section: [Networking](Networking.md)
