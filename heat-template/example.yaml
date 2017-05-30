@@ -123,7 +123,7 @@ resources:
       network_id: { get_resource: demo_net }
       fixed_ips:
         - subnet_id: { get_resource: demo_subnet }
-      security_groups: [{ get_resource: server_security_group }]
+      security_groups: [{ get_resource: webserver_security_group }]
   server1_floating_ip:
     type: OS::Neutron::FloatingIP
     properties:
