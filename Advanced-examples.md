@@ -124,7 +124,7 @@ Now, we define the virtual machine we want to create...
         network_id: { get_resource: demo_net }
         fixed_ips:
           - subnet_id: { get_resource: demo_subnet }
-        security_groups: [{ get_resource: server_security_group }]
+        security_groups: [{ get_resource: webserver_security_group }]
 
 ...and we assign it a floating ip.
 
