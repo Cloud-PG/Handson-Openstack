@@ -49,7 +49,7 @@ Glossary<a name="glossary"></a>
 Openstack services<a name="services"></a>
 ---------
 
-* Keystone: Authentication ad authorization service
+* Keystone: Authentication and authorization service
 * Glance: Image service
 * Nova: Compute service
 * Neutron: Network service

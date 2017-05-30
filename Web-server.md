@@ -5,7 +5,7 @@ First Example (web server)<a name="web-server"></a>
 2. Install web-server (nginx).
 3. Download [tarball](https://github.com/Cloud-PG/Handson-Openstack/raw/master/web-server.tar.gz) with handson website (OPTIONAL).
 4. Open the necessary ports.
-5. Open browser, go to vm floating ip and verify installation.
+5. Open browser, go to the virtual machine floating ip and verify the installation.
 
 ### Solution
 

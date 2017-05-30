@@ -6,7 +6,7 @@ Heat Introduction<a name="heat-introduction"></a>
 
 ### What is it?
 
-Heat is the main project in the OpenStack Orchestration program. It implements an orchestration engine to launch multiple composite cloud applications based on templates in the form of text files that can be treated like code.
+**Heat** is the main project in the OpenStack Orchestration program. It implements an orchestration engine to launch multiple composite cloud applications based on templates in the form of text files that can be treated like code.
 
 ### How does it work?
 
@@ -188,7 +188,21 @@ This wait_handle is defined like this:
 
 To verify everything is correct, compare your code to [this complete template](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/heat-template/example.yaml).
 
-### 3. Verify operations
+### 3. Launch stack
+
+In the openstack dashboard, go to **Project** -> **ORCHESTRATION** -> **Stacks** -> **Launch Stack**.
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-1.png)
+
+Select the yaml template and click **next**.
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-2.png)
+
+Fill in the empty fields and click **Launch**.
+
+![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-3.png)
+
+### 4. Verify operations
 
 Once the stack creation is complete, point your browser to the floating ip of the newly created virtual machine and verify that you see this page.
 
