@@ -10,10 +10,10 @@ First Example (web server)<a name="web-server"></a>
 ### Solution
 
 1. Open a terminal and connect as user ubuntu to the vm you created.
-  > #: ssh ubuntu@10.2.201.'x'
+  > ~: ssh ubuntu@10.2.201.'x'
 
 2. Install nginx (or apache) web-server.
-  > #: sudo apt-get update && sudo apt-get install nginx
+  > ~: sudo apt-get update && sudo apt-get install nginx
 
 3. OPTIONAL: Download and untar tarball containing a website with a replica of this guide.
   > ~: wget https://github.com/Cloud-PG/Handson-Openstack/raw/master/web-server.tar.gz
