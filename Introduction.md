@@ -14,11 +14,11 @@ An **instance** is a Virtual machine. You can specify its resources through the 
 
 To achieve **storage persistence** (storage not deleted after destroying an instance), we need **volumes** that acts as real disks. You can tell your instance to use a volume as its "root" disk, or attach and detach volumes to instances as secondary disks. Volumes are independent from instances, so if you destroy an instance with a volume attached, you will have the volume available to use with other instances.
 
-**Network** is a private network. It can be connected to the outside world (Openstack **ext-net**) using a **router**. Each network has at least a **subnet** which defines the various options of the network, such as the ip address, dns servers, gateway, ecc. Different networks don't "see" each other unless specified by the user (through advanced use of Openstack routers).
+**Networks** in openstack are private networks. They can be connected to the outside world (Openstack **ext-net**) using a **router**. Each network has at least a **subnet** which defines the various options of the network, such as the ip address, dns servers, gateway, etc. Different networks don't "see" each other unless specified by the user (through advanced use of Openstack routers).
 
 ### Project, access & security, key pairs, floating ip
 
-**Projects** are personal area accessible only by users with the necessary permissions. Each project has its own **quota**, the maximum amount of resources (CPU, RAM, ecc) usable by the project.
+A **Project** is a personal area accessible only by users with the necessary permissions. Each project has its own **quota**, the maximum amount of resources (CPU, RAM, etc) usable by the project.
 
 In the **access & security** section, you can specify information useful to connect to the instances you create. You can add your **key pairs**, public ssh key used to access a virtual machine, specify **security groups** to open ports for your instances (by default all ports are closed for virtual machines) and manage your **floating IPs**, public addresses that you can "attach" to an instance.
 
