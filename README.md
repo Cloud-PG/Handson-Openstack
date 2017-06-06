@@ -1,5 +1,7 @@
 # Hands-on Openstack
 
+## https://github.com/Cloud-PG/Handson-Openstack
+
 1. [Introduction](Introduction.md)
     1. [General notions](Introduction.md)
     2. [Glossary](Introduction.md)
