@@ -1,6 +1,6 @@
 # Hands-on Openstack
 
-## https://github.com/Cloud-PG/Handson-Openstack
+## https://github.com/Cloud-PG/Handson-Openstack/blob/master/README.md
 
 1. [Introduction](Introduction.md)
     1. [General notions](Introduction.md)
