@@ -37,6 +37,7 @@ Glossary<a name="glossary"></a>
 * **Image**: a collection of files that represent the initial state of the VM created (Server). It is possible to create personalized image of several OSs (Operative Systems);
 * **Snapshot**: a copy of a system volume or image at a precise moment;
 * **Volume**: a data storage managed like a disk storage;
+* **IP address**: Internet Protocol address, a unique number that identifies a computer in a Network (Internet etc.);
 * **Network**: a virtual network that provides connectivity among entities;
 * **Subnet**: logical subdivision of a Network (IP);
 * **Router**: a physical or virtual network device that can manage network traffic between different networks;
