@@ -26,6 +26,12 @@ First Example (web server)<a name="web-server"></a>
 
 5. Open your browser and go to the floating ip address of your vm. You should see this page (if you didn't skip step 3):
 
+> **Note**: if you get the error `sudo: unable to resolve host name-of-this-machine` you have to add the value stored in `/etc/hostname` in `/etc/hosts` like that:
+
+> ```bash
+> 127.0.0.1 localhost localhost.localdomain name-of-this-machine
+> ```
+
   ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Web-server.png)
 
 Next section: [Advanced examples](Advanced-examples.md)
