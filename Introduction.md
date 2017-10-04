@@ -29,22 +29,22 @@ In the **access & security** section, you can specify information helpful to con
 Glossary<a name="glossary"></a>
 ---------
 
-* **Project**
-* **User**
-* **Quota**
-* **Instance**
-* **Flavour**
-* **Image**
-* **Snapshot**
-* **Volume**
-* **Network**
-* **Subnet**
-* **Router**
-* **Floating IP**
-* **Security Group**
-* **Key Pair**
-* **Stack**
-* **Template**
+* **Project**: the basic item that an OpenStack user can manage. The project will contain all the resources that have to be assigned to a specific project to work;
+* **User**: an identity inside OpenStack that can manage projects. It can have roles and other attributes;
+* **Quota**: is a specific limit imposed to a resource;
+* **Instance**: a created VM (Virtual Machine) in a certain state (running, suspended etc.);
+* **Flavour**: type of an Instance (could be a set of characteristics);
+* **Image**: a collection of files that represent the initial state of the VM created (Server). It is possible to create personalized image of several OSs (Operative Systems);
+* **Snapshot**: a copy of a system volume or image at a precise moment;
+* **Volume**: a data storage managed like a disk storage;
+* **Network**: a virtual network that provides connectivity among entities;
+* **Subnet**: logical subdivision of a Network (IP);
+* **Router**: a physical or virtual network device that can manage network traffic between different networks;
+* **Floating IP**: an IP address associated with a specific instance, that is public and doesn't change each time the VM boots;
+* **Security Group**: a set of traffic filter rules applied to a specific instance;
+* **Key Pair**: a set of a public and a private key used in several fields like authentication and file signing;
+* **Stack**: a collection of OpenStack resource managed by the Orchestration service according to a given template;
+* **Template**: a Heat Orchestration Template (HOT) is a configuration file in the format native to OpenStack.
 
 Openstack services<a name="services"></a>
 ---------
