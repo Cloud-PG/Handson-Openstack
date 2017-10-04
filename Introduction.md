@@ -47,15 +47,17 @@ Glossary<a name="glossary"></a>
 * **Stack**: a collection of OpenStack resource managed by the Orchestration service according to a given template;
 * **Template**: a Heat Orchestration Template (HOT) is a configuration file in the format native to OpenStack.
 
+For other terms consult the [OpenStack Glossary](https://docs.openstack.org/doc-contrib-guide/common/glossary.html).
+
 Openstack services<a name="services"></a>
 ---------
 
-* Keystone: Authentication and authorization service
-* Glance: Image service
-* Nova: Compute service
-* Neutron: Network service
-* Cinder: Volumes and persistent storage service
-* Heat: Orchestration service
+* **Keystone**: Authentication and authorization service
+* **Glance**: Image service
+* **Nova**: Compute service
+* **Neutron**: Network service
+* **Cinder**: Volumes and persistent storage service
+* **Heat**: Orchestration service
 
 Dashboard usage<a name="dashboard"></a>
 ---------
