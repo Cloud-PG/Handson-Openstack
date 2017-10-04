@@ -11,8 +11,8 @@ Heat Introduction<a name="heat-introduction"></a>
 ### How does it work?
 
 * A Heat template describes the infrastructure for a cloud application in a text file that is readable and writable by humans.
-* Infrastructure resources that can be described include: servers, floating ips, volumes, security groups, users, etc.
-* Templates can also specify the relationships between resources (e.g. this volume is connected to this server). This enables Heat to call out to the OpenStack APIs to create all of your infrastructure in the correct order to completely launch your application.
+* Infrastructure resources that can be described include servers, floating ips, volumes, security groups, users, etc.
+* Templates can also specify the relationships between resources (e.g. this volume is connected to this server). This enables Heat to call out to the OpenStack APIs to create all of your needed infrastructures in the correct order to completely launch your application.
 * Heat manages the whole lifecycle of the application - when you need to change your infrastructure, simply modify the template and use it to update your existing stack. Heat knows how to make the necessary changes. It will delete all of the resources when you are finished with the application, too.
 
 For more information on heat, visit this [guide](https://docs.openstack.org/developer/heat/template_guide/hot_guide.html).
@@ -32,13 +32,13 @@ We want to try to replicate everything we did in this hands-on via heat, doing e
 
   > ~: vim example.yaml
 
-  Add these lines to it. They define the heat template version and the descrition of what this template will do.
+  Add these lines to it. They define the heat template version and the descritpion of what this template will do.
 
     heat_template_version: 2015-04-30
 
-    description: Create network, subnet, router and an instance with a floating ip and web-server installed.
+    description: Create a network, subnet, router and an instance with a floating ip and web-server installed.
 
-  First of all, we need to define the parameters we want the user to be able to modify, such as the various reosources names, the image to use, etc.
+  First of all, we need to define the parameters we want the user to be able to modify, such as the various resources names, the image to use, etc.
 
     parameters:
       demo_net_name:
