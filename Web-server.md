@@ -10,24 +10,30 @@ First Example (web server)<a name="web-server"></a>
 ### Solution
 
 1. Open a terminal and connect as user ubuntu to the vm you created.
-  > ~: ssh ubuntu@10.2.201.'x'
+```bash
+~: ssh ubuntu@10.2.201.'x'
+```
 
 2. Install nginx (or apache) web-server.
-  > ~: sudo apt-get update && sudo apt-get install nginx
+```bash
+~: sudo apt-get update && sudo apt-get install nginx
+```
 
 3. OPTIONAL: Download and untar tarball containing a website with a replica of this guide.
-  > ~: wget https://github.com/Cloud-PG/Handson-Openstack/raw/master/web-server.tar.gz
+```bash
+~: wget https://github.com/Cloud-PG/Handson-Openstack/raw/master/web-server.tar.gz
 
-  > ~: sudo tar -zxvf web-server.tar.gz -C /var/www
+~: sudo tar -zxvf web-server.tar.gz -C /var/www
 
-  > ~: sudo service nginx restart
+~: sudo service nginx restart
+```
 
 4. Open port 80 as we did for the SSH port in section [Port-mapping](Port-mapping.md).
 
 5. Open your browser and go to the floating ip address of your vm. You should see this page (if you didn't skip step 3):
 
 > **Note**: if you get the error `sudo: unable to resolve host name-of-this-machine` you have to add the value stored in `/etc/hostname` in `/etc/hosts` like that:
-
+>
 > ```bash
 > 127.0.0.1 localhost localhost.localdomain name-of-this-machine
 > ```
