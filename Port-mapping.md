@@ -6,22 +6,22 @@ Verify that the instance has been correctly created. Click on it and go to the *
 * Create one for **SSH access** and another one to allow **ICMP** to the virtual machine.
 * **Manage rules** and **Add a rule** to open specific ports.
 
-  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-1.png)
+  <kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-1.png)</kbd>
 
-  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-2.png)
+  <kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-2.png)</kbd>
 
-  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-3.png)
+  <kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-3.png)</kbd>
 
-  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-4.png)
+  <kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-4.png)</kbd>
 
-  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-5.png)
+  <kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-5.png)</kbd>
 
 
 * Go to **Instances**, under **Actions** column, **Edit security groups** for your instance and add the newly created ones.
 
-  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-6.png)
+  <kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-6.png)</kbd>
 
-  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-7.png)
+  <kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Security-groups-7.png)</kbd>
 
 
 Next section: [Web server example](Web-server.md)
