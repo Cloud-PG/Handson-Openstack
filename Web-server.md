@@ -38,6 +38,6 @@ First Example (web server)<a name="web-server"></a>
 > 127.0.0.1 localhost localhost.localdomain name-of-this-machine
 > ```
 
-  ![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Web-server.png)
+  <kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Web-server.png)</kbd>
 
 Next section: [Advanced examples](Advanced-examples.md)
