@@ -192,18 +192,18 @@ To verify everything is correct, compare your code to [this complete template](h
 
 In the openstack dashboard, go to **Project** -> **ORCHESTRATION** -> **Stacks** -> **Launch Stack**.
 
-![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-1.png)
+<kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-1.png)</kbd>
 
 Select the yaml template and click **next**.
 
-![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-2.png)
+<kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-2.png)</kbd>
 
 Fill in the empty fields and click **Launch**.
 
-![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-3.png)
+<kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Heat-3.png)</kbd>
 
 ### 4. Verify operations
 
 Once the stack creation is complete, point your browser to the floating ip of the newly created virtual machine and verify that you see this page.
 
-![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Web-server.png)
+<kbd>![](https://raw.githubusercontent.com/Cloud-PG/Handson-Openstack/master/img/Web-server.png)</kbd>
